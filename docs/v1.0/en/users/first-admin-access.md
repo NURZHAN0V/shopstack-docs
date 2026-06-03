@@ -8,7 +8,7 @@ Open the admin panel and create an account.
   alt="Login screen"
   caption="Login form: email and password fields, Sign in and register links, ShopStack branding."
   path="/images/users/onboarding-login.png"
-  status="placeholder"
+  status="ready"
 />
 
 ## Grant admin role
@@ -24,7 +24,7 @@ Roles: `admin`, `manager` for `/api/admin/*`.
   alt="Sidebar user menu"
   caption="Sidebar footer: avatar, profile items, theme toggle, sign out."
   path="/images/users/sidebar-user-menu.png"
-  status="placeholder"
+  status="ready"
 />
 
 See [Two-factor authentication](./security-2fa.md) for production.

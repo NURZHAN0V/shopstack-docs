@@ -4,6 +4,10 @@
 
 ## 2026-06-03
 
+### Docs
+
+- Скриншоты панели: вход, меню пользователя, список/редактирование/импорт товаров, дерево категорий (`docs/public/images/users/`)
+
 ### Portal
 
 - Локальный `pnpm dev`: `base` `/` в development, без 404 на `http://localhost:5173/`; production/preview — `/shopstack-docs/`

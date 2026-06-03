@@ -34,7 +34,7 @@
 <DocScreenshot
   alt="Краткое описание"
   caption="Что должно быть видно на скриншоте."
-  path="/images/users/example.png"
+  path="/images/users/dashboard.png"
   status="ready"
 />
 ```

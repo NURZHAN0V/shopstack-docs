@@ -8,7 +8,7 @@
   alt="Список товаров"
   caption="Таблица: название, SKU, цена, остаток, статус; кнопка «Добавить товар»; панель фильтров сверху."
   path="/images/users/products-list.png"
-  status="placeholder"
+  status="ready"
 />
 
 ## Карточка товара
@@ -22,7 +22,7 @@
   alt="Редактирование товара"
   caption="Форма товара: вкладки основное/варианты/медиа, поле описания, кнопка сохранения."
   path="/images/users/product-edit.png"
-  status="placeholder"
+  status="ready"
 />
 
 ## Импорт и экспорт CSV
@@ -35,7 +35,7 @@
   alt="Импорт товаров"
   caption="Диалог импорта: зона загрузки файла, превью строк, кнопка «Импортировать»."
   path="/images/users/products-import.png"
-  status="placeholder"
+  status="ready"
 />
 
 ## Категории
@@ -46,7 +46,7 @@
   alt="Дерево категорий"
   caption="Список категорий с отступами по уровню, drag или кнопки добавить/редактировать."
   path="/images/users/categories-tree.png"
-  status="placeholder"
+  status="ready"
 />
 
 ## Склады

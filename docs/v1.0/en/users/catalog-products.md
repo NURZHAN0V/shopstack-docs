@@ -8,7 +8,7 @@
   alt="Product list"
   caption="Table: name, SKU, price, stock, status; Add product button; filters on top."
   path="/images/users/products-list.png"
-  status="placeholder"
+  status="ready"
 />
 
 ## Product card
@@ -19,7 +19,7 @@ Variants, related products, categories, AI description (OpenRouter).
   alt="Product edit"
   caption="Product form: tabs for general/variants/media, description field, Save."
   path="/images/users/product-edit.png"
-  status="placeholder"
+  status="ready"
 />
 
 ## CSV import/export
@@ -30,7 +30,7 @@ Template → upload → mapping → job status via admin import API.
   alt="Product import"
   caption="Import dialog: file drop zone, row preview, Import button."
   path="/images/users/products-import.png"
-  status="placeholder"
+  status="ready"
 />
 
 ## Categories and warehouses
@@ -41,5 +41,5 @@ Category tree and per-warehouse stock in respective sections.
   alt="Category tree"
   caption="Indented category list with add/edit actions."
   path="/images/users/categories-tree.png"
-  status="placeholder"
+  status="ready"
 />

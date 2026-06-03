@@ -9,7 +9,7 @@
   alt="Экран входа и регистрации"
   caption="Форма логина: поля email и пароль, кнопки «Войти» и переход к регистрации, логотип ShopStack."
   path="/images/users/onboarding-login.png"
-  status="placeholder"
+  status="ready"
 />
 
 ## Назначение роли admin
@@ -27,7 +27,7 @@ docker compose exec postgres psql -U postgres -d shopstack \
   alt="Меню пользователя в сайдбаре"
   caption="Нижняя часть сайдбара: аватар, имя, пункты профиля, переключатель темы, выход."
   path="/images/users/sidebar-user-menu.png"
-  status="placeholder"
+  status="ready"
 />
 
 ## Двухфакторная аутентификация
