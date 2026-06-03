@@ -54,45 +54,102 @@ html {
   color: var(--ss-accent);
 }
 
+/* Переключатель версий — как у Nuxt: бейдж + выпадающий список */
 .VPVersionSwitcher {
+  position: relative;
   flex-shrink: 0;
+  margin-left: 0.625rem;
 }
 
-.VPVersionSwitcher__select {
-  border: 1px solid var(--vp-c-divider);
+.VPVersionSwitcher__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--ss-accent);
   border-radius: 6px;
-  padding: 0.25rem 0.5rem;
-  background: var(--vp-c-bg);
-  color: var(--vp-c-text-1);
+  background: transparent;
+  color: var(--ss-accent);
   font-size: 13px;
-  max-width: 11rem;
+  font-weight: 500;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
 }
 
-.VPVersionSwitcher__select:focus {
-  outline: 2px solid var(--vp-c-brand-1);
-  outline-offset: 1px;
+.VPVersionSwitcher__trigger:hover {
+  background: color-mix(in srgb, var(--ss-accent) 12%, transparent);
 }
 
-/* На страницах с сайдбаром — переключатель внутри навигации, не у границы колонок */
-.VPVersionSwitcher--sidebar {
-  margin: 0 0 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--vp-c-divider);
+.VPVersionSwitcher__trigger:focus-visible {
+  outline: 2px solid var(--ss-accent);
+  outline-offset: 2px;
 }
 
-.VPVersionSwitcher--sidebar .VPVersionSwitcher__label {
-  display: block;
-  margin-bottom: 0.375rem;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: var(--vp-c-text-2);
+.VPVersionSwitcher__chevron {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-top: 2px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 5px solid currentColor;
+  transition: transform 0.2s;
 }
 
-.VPVersionSwitcher--sidebar .VPVersionSwitcher__select {
+.VPVersionSwitcher__chevron.open {
+  transform: rotate(180deg);
+}
+
+.VPVersionSwitcher__menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 30;
+  min-width: 9rem;
+  margin: 0;
+  padding: 0.35rem;
+  list-style: none;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg-soft);
+  box-shadow: var(--vp-shadow-3);
+}
+
+.VPVersionSwitcher__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
   width: 100%;
-  max-width: none;
+  padding: 0.45rem 0.6rem;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--vp-c-text-1);
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.VPVersionSwitcher__item:hover {
+  background: var(--vp-c-default-soft);
+}
+
+.VPVersionSwitcher__item.active {
+  color: var(--ss-accent);
+}
+
+.VPVersionSwitcher__check {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  background-color: currentColor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E")
+    center / contain no-repeat;
 }
 
 /* Скроллбар сайдбара — тонкий, не перекрывает шапку */

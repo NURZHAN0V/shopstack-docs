@@ -24,7 +24,7 @@ const sharedTheme = {
     src: '/images/shopstack-logo.svg',
     alt: 'ShopStack',
   },
-  siteTitle: 'ShopStack Docs',
+  siteTitle: 'ShopStack',
   outline: { label: 'On this page' },
   returnToTopLabel: 'Back to top',
 }
@@ -46,7 +46,7 @@ export default defineConfig(({ mode }) => ({
     if (html.includes('http-equiv="refresh"')) return
     fs.writeFileSync(indexPath, html.replace('<head>', `<head>${ROOT_REDIRECT_SNIPPET}`))
   },
-  title: 'ShopStack Docs',
+  title: 'ShopStack',
   description: 'Documentation for ShopStack platform — admin, API, storefront',
   lastUpdated: true,
   ignoreDeadLinks: [
@@ -60,7 +60,7 @@ export default defineConfig(({ mode }) => ({
       label: 'English',
       lang: 'en',
       link: `${DOC_V}/en/`,
-      title: 'ShopStack Docs',
+      title: 'ShopStack',
       themeConfig: {
         ...sharedTheme,
         nav: navEn,
@@ -84,11 +84,11 @@ export default defineConfig(({ mode }) => ({
       label: 'Русский',
       lang: 'ru-RU',
       link: `${DOC_V}/ru/`,
-      title: 'Документация ShopStack',
+      title: 'ShopStack',
       description: 'Документация платформы ShopStack — панель, API, витрина',
       themeConfig: {
         ...sharedTheme,
-        siteTitle: 'Документация ShopStack',
+        siteTitle: 'ShopStack',
         nav: navRu,
         sidebar: {
           [`${DOC_V}/ru/users/`]: sidebarUsersRu,

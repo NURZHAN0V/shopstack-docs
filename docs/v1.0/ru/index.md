@@ -1,6 +1,6 @@
 ---
 layout: home
-title: ShopStack Docs
+title: ShopStack
 
 hero:
   name: ShopStack

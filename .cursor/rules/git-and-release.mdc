@@ -1,0 +1,46 @@
+---
+description: Git, коммиты и релизы shopstack-docs (push, теги, без Co-authored-by)
+alwaysApply: true
+---
+
+# shopstack-docs — git и релизы
+
+## Коммиты
+
+- Сообщения **на русском**, по смыслу изменения.
+- **Не коммитить** `AGENTS.md` (в `.gitignore`, только локально).
+- **Без** `Co-authored-by` от Cursor/ботов. Если `git commit` из IDE добавляет trailer — создавать коммит через `git commit-tree`:
+
+```powershell
+cd c:\Git\goshop\shopstack-docs
+git add <файлы>
+$tree = git write-tree
+$parent = git rev-parse HEAD
+$msgFile = New-TemporaryFile
+[System.IO.File]::WriteAllText($msgFile.FullName, "сообщение`n", [System.Text.UTF8Encoding]::new($false))
+$commit = git commit-tree $tree -p $parent -F $msgFile.FullName
+Remove-Item $msgFile.FullName -Force
+git update-ref refs/heads/main $commit
+```
+
+- Перед релизом: обновить `CHANGELOG.md`, при необходимости `pnpm build`.
+
+## Push и теги (по запросу пользователя)
+
+После коммитов на `main`:
+
+```powershell
+cd c:\Git\goshop\shopstack-docs
+git push origin main
+git tag docs-v1.0.1   # или следующий docs-vX.Y.Z — на HEAD актуального коммита
+git push origin docs-v1.0.1
+```
+
+- **Не переписывать** уже опубликованные теги (`docs-v1.0.0` и т.д.) — только новый patch/minor.
+- Тег ставить на **HEAD** с полным набором правок релиза, не на устаревший SHA.
+- Release на GitHub — вручную в UI (описание без `AGENTS.md`, ссылка `https://nurzhan0v.github.io/shopstack-docs/v1.0/ru/`).
+
+## VitePress
+
+- Dev: `base` `/` (`mode === 'development'`). Build/preview: `/shopstack-docs/`.
+- Пути и редиректы — через `withBase()` из `vitepress`, не `import.meta.env.BASE` напрямую.

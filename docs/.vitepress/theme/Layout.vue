@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import DefaultTheme, { useSidebar } from 'vitepress/theme'
-import { useData, useRoute } from 'vitepress'
+import DefaultTheme from 'vitepress/theme'
+import { useData, useRoute, useRouter, withBase } from 'vitepress'
 import { onMounted, watch } from 'vue'
 import VersionSwitcher from './components/VersionSwitcher.vue'
 
 const route = useRoute()
+const router = useRouter()
 const { page } = useData()
-const { hasSidebar } = useSidebar()
 
 function redirectRootIfNeeded() {
   if (page.value.relativePath !== 'index.md') return
 
   const locale = navigator.language.toLowerCase().startsWith('ru') ? 'ru' : 'en'
-  const target = `${import.meta.env.BASE}v1.0/${locale}/`
-  if (route.path === target || window.location.pathname.endsWith(`/v1.0/${locale}/`)) return
+  const target = `/v1.0/${locale}/`
+  if (route.path === target) return
 
-  window.location.replace(target)
+  router.go(withBase(target))
 }
 
 onMounted(redirectRootIfNeeded)
@@ -24,11 +24,8 @@ watch(() => route.path, redirectRootIfNeeded)
 
 <template>
   <DefaultTheme.Layout>
-    <template v-if="!hasSidebar" #nav-bar-content-after>
+    <template #nav-bar-title-after>
       <VersionSwitcher />
-    </template>
-    <template v-if="hasSidebar" #sidebar-nav-before>
-      <VersionSwitcher variant="sidebar" />
     </template>
   </DefaultTheme.Layout>
 </template>
