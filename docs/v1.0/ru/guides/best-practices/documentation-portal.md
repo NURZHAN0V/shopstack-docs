@@ -10,7 +10,7 @@
 | Локали | Новая страница — **RU и EN** в одном PR (`docs/v1.0/ru/` + `docs/v1.0/en/`) |
 | Версии docs | Контент в `docs/v1.0/`; breaking API → `pnpm version:snapshot v2.0` и запись в `versions.ts` |
 | API-ручки | Блок `<ApiEndpoint>`: описание, пример запроса и ответа |
-| Скриншоты | `<DocScreenshot>` с `path`, `alt`, `caption`; без lorem ipsum в гайдах |
+| Скриншоты | `<DocScreenshot>`: при `ready` — короткий `caption` над картинкой; при `placeholder` — развёрнутое описание внизу |
 | Источник API | `goshop/server/docs/api.md` → затем `docs/v1.0/ru/api/*.md` |
 | Запреты | Нет ссылок на vue-faq и сторонние FAQ; нет секретов в примерах |
 | Git | Только автор репозитория; без `Co-authored-by` от ботов; без чужих email в коммитах |
@@ -32,8 +32,8 @@
 
 ```md
 <DocScreenshot
-  alt="Краткое описание"
-  caption="Что должно быть видно на скриншоте."
+  alt="Дашборд панели"
+  caption="Дашборд после входа"
   path="/images/users/dashboard.png"
   status="ready"
 />

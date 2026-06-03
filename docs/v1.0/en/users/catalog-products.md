@@ -6,7 +6,7 @@
 
 <DocScreenshot
   alt="Product list"
-  caption="Table: name, SKU, price, stock, status; Add product button; filters on top."
+  caption="Product list"
   path="/images/users/products-list.png"
   status="ready"
 />
@@ -17,7 +17,7 @@ Variants, related products, categories, AI description (OpenRouter).
 
 <DocScreenshot
   alt="Product edit"
-  caption="Product form: tabs for general/variants/media, description field, Save."
+  caption="Edit product"
   path="/images/users/product-edit.png"
   status="ready"
 />
@@ -28,7 +28,7 @@ Template → upload → mapping → job status via admin import API.
 
 <DocScreenshot
   alt="Product import"
-  caption="Import dialog: file drop zone, row preview, Import button."
+  caption="Product import"
   path="/images/users/products-import.png"
   status="ready"
 />
@@ -39,7 +39,7 @@ Category tree and per-warehouse stock in respective sections.
 
 <DocScreenshot
   alt="Category tree"
-  caption="Indented category list with add/edit actions."
+  caption="Category tree"
   path="/images/users/categories-tree.png"
   status="ready"
 />

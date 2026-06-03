@@ -19,7 +19,7 @@ docker compose up --build
 
 <DocScreenshot
   alt="Главная панели после входа"
-  caption="Дашборд: боковое меню (Товары, Заказы, Клиенты, Контент, Настройки), приветствие и сводные виджеты."
+  caption="Дашборд после входа"
   path="/images/users/dashboard.png"
   status="ready"
 />

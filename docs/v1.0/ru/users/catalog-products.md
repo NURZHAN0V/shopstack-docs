@@ -6,7 +6,7 @@
 
 <DocScreenshot
   alt="Список товаров"
-  caption="Таблица: название, SKU, цена, остаток, статус; кнопка «Добавить товар»; панель фильтров сверху."
+  caption="Список товаров"
   path="/images/users/products-list.png"
   status="ready"
 />
@@ -20,7 +20,7 @@
 
 <DocScreenshot
   alt="Редактирование товара"
-  caption="Форма товара: вкладки основное/варианты/медиа, поле описания, кнопка сохранения."
+  caption="Редактирование товара"
   path="/images/users/product-edit.png"
   status="ready"
 />
@@ -33,7 +33,7 @@
 
 <DocScreenshot
   alt="Импорт товаров"
-  caption="Диалог импорта: зона загрузки файла, превью строк, кнопка «Импортировать»."
+  caption="Импорт товаров"
   path="/images/users/products-import.png"
   status="ready"
 />
@@ -44,7 +44,7 @@
 
 <DocScreenshot
   alt="Дерево категорий"
-  caption="Список категорий с отступами по уровню, drag или кнопки добавить/редактировать."
+  caption="Дерево категорий"
   path="/images/users/categories-tree.png"
   status="ready"
 />

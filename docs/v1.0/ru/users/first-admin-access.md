@@ -7,7 +7,7 @@
 
 <DocScreenshot
   alt="Экран входа и регистрации"
-  caption="Форма логина: поля email и пароль, кнопки «Войти» и переход к регистрации, логотип ShopStack."
+  caption="Вход в панель"
   path="/images/users/onboarding-login.png"
   status="ready"
 />
@@ -25,7 +25,7 @@ docker compose exec postgres psql -U postgres -d shopstack \
 
 <DocScreenshot
   alt="Меню пользователя в сайдбаре"
-  caption="Нижняя часть сайдбара: аватар, имя, пункты профиля, переключатель темы, выход."
+  caption="Меню пользователя"
   path="/images/users/sidebar-user-menu.png"
   status="ready"
 />

@@ -16,15 +16,18 @@ const src = computed(() => (props.path?.startsWith('/') ? props.path : `/${props
 </script>
 
 <template>
-  <figure class="doc-screenshot">
+  <figure class="doc-screenshot" :class="{ 'doc-screenshot--ready': isReady }">
+    <p v-if="isReady" class="doc-screenshot__lead">{{ caption }}</p>
+
     <div v-if="!isReady" class="doc-screenshot__placeholder" role="img" :aria-label="alt">
       <span class="doc-screenshot__icon" aria-hidden="true">🖼</span>
       <span class="doc-screenshot__badge">Скриншот — вставьте файл</span>
       <code v-if="path" class="doc-screenshot__path">{{ path }}</code>
     </div>
     <img v-else :src="src" :alt="alt" loading="lazy" class="doc-screenshot__img" />
-    <figcaption class="doc-screenshot__caption">
-      <strong v-if="!isReady">На изображении должно быть:</strong>
+
+    <figcaption v-if="!isReady" class="doc-screenshot__caption">
+      <strong>На изображении должно быть:</strong>
       {{ caption }}
     </figcaption>
   </figure>
@@ -37,6 +40,20 @@ const src = computed(() => (props.path?.startsWith('/') ? props.path : `/${props
   border-radius: 8px;
   overflow: hidden;
   background: var(--vp-c-bg-soft);
+}
+
+.doc-screenshot--ready {
+  padding-top: 0.75rem;
+  border: none;
+  background: transparent;
+}
+
+.doc-screenshot__lead {
+  margin: 0 0 0.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--vp-c-text-2);
 }
 
 .doc-screenshot__placeholder {
@@ -77,6 +94,8 @@ const src = computed(() => (props.path?.startsWith('/') ? props.path : `/${props
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--vp-c-divider);
 }
 
 .doc-screenshot__caption {

@@ -18,7 +18,7 @@ docker compose up --build
 
 <DocScreenshot
   alt="Admin dashboard after login"
-  caption="Dashboard: sidebar (Products, Orders, Customers, Content, Settings), welcome area and summary widgets."
+  caption="Dashboard after login"
   path="/images/users/dashboard.png"
   status="ready"
 />

@@ -6,7 +6,7 @@ Open the admin panel and create an account.
 
 <DocScreenshot
   alt="Login screen"
-  caption="Login form: email and password fields, Sign in and register links, ShopStack branding."
+  caption="Admin login"
   path="/images/users/onboarding-login.png"
   status="ready"
 />
@@ -22,7 +22,7 @@ Roles: `admin`, `manager` for `/api/admin/*`.
 
 <DocScreenshot
   alt="Sidebar user menu"
-  caption="Sidebar footer: avatar, profile items, theme toggle, sign out."
+  caption="User menu"
   path="/images/users/sidebar-user-menu.png"
   status="ready"
 />
