@@ -1,3 +1,8 @@
+/* Фон html = фон темы, без белой полоски над шапкой в dark mode */
+html {
+  background-color: var(--vp-c-bg);
+}
+
 :root {
   --ss-accent: #a47864;
   --ss-accent-dark: #8b6554;
@@ -28,49 +33,21 @@
 
 .VPHero .image-container {
   overflow: hidden;
-  width: auto;
-  height: auto;
-  max-width: min(520px, 100%);
-  transform: none;
 }
 
 .VPHero .image-src {
-  position: relative;
-  top: auto;
-  left: auto;
-  transform: none;
-  display: block;
-  width: 100%;
   max-width: min(520px, 100%);
-  max-height: none;
-  height: auto;
   border-radius: 12px;
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
   opacity: 1;
   filter: none;
 }
 
-/* Viewport и скроллбар в тёмной теме — без белой полосы справа */
-html {
-  overflow-x: hidden;
-  background-color: var(--vp-c-bg);
-}
-
-html.dark {
-  scrollbar-color: var(--vp-c-bg-soft) var(--vp-c-bg);
-}
-
-html.dark ::-webkit-scrollbar {
-  width: 10px;
-}
-
-html.dark ::-webkit-scrollbar-track {
-  background: var(--vp-c-bg);
-}
-
-html.dark ::-webkit-scrollbar-thumb {
-  background: var(--vp-c-bg-soft);
-  border-radius: 5px;
+@media (min-width: 960px) {
+  .VPHero .image-src {
+    max-width: min(520px, 100%);
+    max-height: none;
+  }
 }
 
 .doc-screenshot__badge {
@@ -78,7 +55,7 @@ html.dark ::-webkit-scrollbar-thumb {
 }
 
 .VPVersionSwitcher {
-  margin-right: 0.75rem;
+  flex-shrink: 0;
 }
 
 .VPVersionSwitcher__select {
@@ -88,10 +65,49 @@ html.dark ::-webkit-scrollbar-thumb {
   background: var(--vp-c-bg);
   color: var(--vp-c-text-1);
   font-size: 13px;
-  max-width: 220px;
+  max-width: 11rem;
 }
 
 .VPVersionSwitcher__select:focus {
   outline: 2px solid var(--vp-c-brand-1);
   outline-offset: 1px;
+}
+
+/* На страницах с сайдбаром — переключатель внутри навигации, не у границы колонок */
+.VPVersionSwitcher--sidebar {
+  margin: 0 0 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.VPVersionSwitcher--sidebar .VPVersionSwitcher__label {
+  display: block;
+  margin-bottom: 0.375rem;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--vp-c-text-2);
+}
+
+.VPVersionSwitcher--sidebar .VPVersionSwitcher__select {
+  width: 100%;
+  max-width: none;
+}
+
+/* Скроллбар сайдбара — тонкий, не перекрывает шапку */
+@media (min-width: 960px) {
+  .VPSidebar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--vp-c-divider) transparent;
+  }
+
+  .VPSidebar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .VPSidebar::-webkit-scrollbar-thumb {
+    background: var(--vp-c-divider);
+    border-radius: 3px;
+  }
 }

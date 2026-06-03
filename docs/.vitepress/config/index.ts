@@ -30,12 +30,15 @@ const sharedTheme = {
 }
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const ROOT_REDIRECT_SNIPPET =
-  '<meta http-equiv="refresh" content="0;url=/shopstack-docs/v1.0/ru/">' +
-  '<script>location.replace("/shopstack-docs/v1.0/"+(navigator.language.toLowerCase().startsWith("ru")?"ru":"en")+"/")</script>'
+const GITHUB_PAGES_BASE = '/shopstack-docs/'
 
-export default defineConfig({
-  base: '/shopstack-docs/',
+const ROOT_REDIRECT_SNIPPET =
+  `<meta http-equiv="refresh" content="0;url=${GITHUB_PAGES_BASE}v1.0/ru/">` +
+  `<script>location.replace("${GITHUB_PAGES_BASE}v1.0/"+(navigator.language.toLowerCase().startsWith("ru")?"ru":"en")+"/")</script>`
+
+export default defineConfig(({ mode }) => ({
+  // GitHub Pages — с префиксом репо; локально dev — корень localhost:5173
+  base: mode === 'development' ? '/' : GITHUB_PAGES_BASE,
   async buildEnd() {
     const indexPath = path.join(__dirname, '../dist/index.html')
     if (!fs.existsSync(indexPath)) return
@@ -105,4 +108,4 @@ export default defineConfig({
       },
     },
   },
-})
+}))

@@ -43,7 +43,7 @@ pnpm preview
 
 После `git push` в `main` workflow `.github/workflows/deploy-pages.yml` собирает и выкладывает статику. В репозитории GitHub: **Settings → Pages → Source: GitHub Actions**.
 
-Локально `base` для Pages задан в `docs/.vitepress/config/index.ts` как `/shopstack-docs/`. Для чистого корня домена измените `base` на `/`.
+Локально `pnpm dev` открывает **http://localhost:5173/** (`base` `/`). Сборка и `pnpm preview` — с префиксом `/shopstack-docs/`, как на GitHub Pages.
 
 ## Деплой (свой сервер)
 
