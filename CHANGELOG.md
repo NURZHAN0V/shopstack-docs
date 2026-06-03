@@ -1,0 +1,28 @@
+# Changelog
+
+Формат: по датам. Новые записи — сверху. История портала документации; крупные релизы ShopStack — в секции **Synced**.
+
+## 2026-06-03
+
+### Docs
+
+- Убраны все ссылки на vue-faq; практики и соглашения витрины переписаны внутри портала
+- Удалена интеграция Swagger UI (iframe, `SwaggerEmbed`, `sync:openapi`) — портал полностью статический
+- Справочник API: для каждой ручки — описание, пример запроса и ответа (компонент `ApiEndpoint`)
+- Новые страницы: `api/auth.md`, `api/cart.md`
+
+### Portal
+
+- Первый релиз портала `shopstack-docs` на VitePress 1.6
+- Локали RU и EN: пользователи, витрина, API, тема, версии, best practices
+- Компоненты `DocScreenshot`, `ApiEndpoint`
+
+### Docs
+
+- Справочник REST API по `goshop/server/docs/api.md`
+- Плейсхолдеры скриншотов для гайдов панели и витрины
+- Раздел лучших практик без внешних ссылок на сторонние FAQ
+
+### Synced
+
+- ShopStack API contract v1.0, admin `0.1.0`, Docker `IMAGE_TAG` 1.0.0
