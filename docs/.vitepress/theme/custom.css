@@ -1,0 +1,26 @@
+:root {
+  --ss-accent: #a47864;
+  --ss-accent-dark: #8b6554;
+  --vp-c-brand-1: var(--ss-accent);
+  --vp-c-brand-2: var(--ss-accent-dark);
+  --vp-c-brand-3: #c4a088;
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, var(--ss-accent) 30%, #5c4a3d);
+}
+
+.dark {
+  --ss-accent: #c4a088;
+  --ss-accent-dark: #a47864;
+}
+
+.VPHero .VPButton.brand {
+  background-color: var(--ss-accent);
+}
+
+.VPHero .VPButton.brand:hover {
+  background-color: var(--ss-accent-dark);
+}
+
+.doc-screenshot__badge {
+  color: var(--ss-accent);
+}
