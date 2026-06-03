@@ -1,7 +1,7 @@
 # Architecture
 
 ::: tip Documentation portal rules
-Changes to **shopstack-docs** follow [`AGENTS.md`](https://github.com/NURZHAN0V/shopstack-docs/blob/main/AGENTS.md). Checklist: [Docs portal rules](./documentation-portal.md).
+Changes to **shopstack-docs**: see [Docs portal rules](./documentation-portal.md).
 :::
 
 ## Frontend principles

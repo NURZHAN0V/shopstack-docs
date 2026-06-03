@@ -20,7 +20,7 @@ docker compose up --build
   alt="Admin dashboard after login"
   caption="Dashboard: sidebar (Products, Orders, Customers, Content, Settings), welcome area and summary widgets."
   path="/images/users/dashboard.png"
-  status="placeholder"
+  status="ready"
 />
 
 ## Local admin

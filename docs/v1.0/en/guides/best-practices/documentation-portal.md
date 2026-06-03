@@ -1,8 +1,6 @@
-# Documentation portal (rules)
+# Documentation portal rules
 
-Mandatory rules for **shopstack-docs** live in [`AGENTS.md`](https://github.com/NURZHAN0V/shopstack-docs/blob/main/AGENTS.md) at the repo root (`shopstack-docs/AGENTS.md` in the monorepo).
-
-Agents and contributors **read AGENTS.md first**, then edit the portal.
+Mandatory rules for **shopstack-docs**. This page is the single source in the published repository.
 
 ## Checklist
 
@@ -15,12 +13,24 @@ Agents and contributors **read AGENTS.md first**, then edit the portal.
 | Screenshots | `<DocScreenshot>` with `path`, `alt`, `caption`; no lorem ipsum in user guides |
 | API source | `goshop/server/docs/api.md` → then `docs/v1.0/ru/api/*.md` |
 | Forbidden | No vue-faq or external FAQ links; no secrets in examples |
+| Git | Repository owner as sole author; no bot `Co-authored-by` trailers |
+
+## Git and commits
+
+- **Author and committer** — your GitHub account only.
+- Do not add `Co-authored-by` trailers from AI or automation tools.
+- Commit messages in Russian (or English for EN-only doc fixes, if agreed in PR).
+- Before `git push`: run `git cat-file -p HEAD` and verify the message body.
 
 ## Versioning
 
 - URLs: `/v1.0/en/...`, `/v1.0/ru/...`
 - Registry: `docs/.vitepress/config/versions.ts`
 - Details: [Documentation versions](/v1.0/en/versions/doc-versioning.md)
+
+## Screenshots
+
+Place files under `docs/public/images/` (`users/`, `storefront/`, `api/`).
 
 ## Before opening a PR
 
@@ -30,12 +40,11 @@ pnpm install
 pnpm build
 ```
 
-## Related AGENTS files
+## Related rules in the monorepo
 
 | Component | File |
 |-----------|------|
 | Admin | `goshop/AGENTS.md` |
 | Storefront | `goshop_client/AGENTS.md` |
-| Docs portal | `shopstack-docs/AGENTS.md` |
 
 See also [Testing and CI](./testing-and-ci.md).

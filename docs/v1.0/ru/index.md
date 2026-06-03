@@ -17,8 +17,8 @@ hero:
       text: API и интеграции
       link: /v1.0/ru/api/introduction
   image:
-    src: /images/shopstack-logo.svg
-    alt: ShopStack
+    src: /images/home-admin-dashboard.png
+    alt: Панель управления ShopStack — дашборд после входа
 
 features:
   - title: Для бизнеса

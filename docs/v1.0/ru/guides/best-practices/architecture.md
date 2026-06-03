@@ -1,7 +1,7 @@
 # Архитектура
 
 ::: tip Правила портала документации
-Правки в **shopstack-docs** — по [`AGENTS.md`](https://github.com/NURZHAN0V/shopstack-docs/blob/main/AGENTS.md). Краткий чеклист: [Правила портала docs](./documentation-portal.md).
+Правки в **shopstack-docs** — по чеклисту: [Правила портала docs](./documentation-portal.md).
 :::
 
 ## Принципы фронтенда ShopStack

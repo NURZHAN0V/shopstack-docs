@@ -17,8 +17,8 @@ hero:
       text: API and integrations
       link: /v1.0/en/api/introduction
   image:
-    src: /images/shopstack-logo.svg
-    alt: ShopStack
+    src: /images/home-admin-dashboard.png
+    alt: ShopStack admin dashboard after sign-in
 
 features:
   - title: For business users

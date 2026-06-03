@@ -33,9 +33,9 @@ pnpm preview
 | Практики | `docs/v1.0/ru/guides/best-practices/` | Vue / Nuxt разработчики |
 | Версии, тема | `docs/v1.0/ru/versions/`, `theme/` | Все |
 
-Новая major-версия docs: `pnpm version:snapshot v2.0` — см. [AGENTS.md](./AGENTS.md) и `docs/v1.0/ru/versions/doc-versioning.md`.
+Новая major-версия docs: `pnpm version:snapshot v2.0` — см. [версии документации](https://nurzhan0v.github.io/shopstack-docs/v1.0/ru/versions/doc-versioning).
 
-Правила контрибуции: [AGENTS.md](./AGENTS.md).
+Правила контрибуции: [Правила портала docs](https://nurzhan0v.github.io/shopstack-docs/v1.0/ru/guides/best-practices/documentation-portal).
 
 ## Публикация (GitHub Pages)
 

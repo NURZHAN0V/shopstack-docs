@@ -32,17 +32,17 @@ function onChange(event: Event) {
 </script>
 
 <template>
-  <label class="VPVersionSwitcher">
-    <span class="VPVersionSwitcher__label">{{ isRu ? 'Версия docs' : 'Docs version' }}</span>
+  <div class="VPVersionSwitcher">
     <select
       class="VPVersionSwitcher__select"
       :value="currentKey"
       :aria-label="isRu ? 'Версия документации' : 'Documentation version'"
+      :title="isRu ? 'Версия документации' : 'Documentation version'"
       @change="onChange"
     >
       <option v-for="v in DOC_VERSIONS" :key="v.key" :value="v.key">
         {{ v.label }} (API {{ v.apiContract }}) — {{ statusText(v.status) }}
       </option>
     </select>
-  </label>
+  </div>
 </template>

@@ -21,7 +21,7 @@ docker compose up --build
   alt="Главная панели после входа"
   caption="Дашборд: боковое меню (Товары, Заказы, Клиенты, Контент, Настройки), приветствие и сводные виджеты."
   path="/images/users/dashboard.png"
-  status="placeholder"
+  status="ready"
 />
 
 ## Локальная панель без Docker
