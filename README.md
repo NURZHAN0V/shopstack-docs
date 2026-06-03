@@ -12,7 +12,7 @@ pnpm install
 pnpm dev
 ```
 
-Откройте http://localhost:5173 — редирект на `/ru/` или `/en/` по языку браузера.
+Откройте http://localhost:5173 — редирект на `/v1.0/ru/` или `/v1.0/en/` по языку браузера. В шапке — переключатель версии документации.
 
 ## Сборка
 
@@ -27,11 +27,13 @@ pnpm preview
 
 | Раздел | Путь | Аудитория |
 |--------|------|-----------|
-| Пользователи | `docs/ru/users/` | Владелец / менеджер магазина |
-| Витрина | `docs/ru/storefront/` | Разработчик `goshop_client` |
-| API | `docs/ru/api/` | Интеграторы, backend — примеры запросов/ответов |
-| Практики | `docs/ru/guides/best-practices/` | Vue / Nuxt разработчики |
-| Версии, тема | `docs/ru/versions/`, `theme/` | Все |
+| Пользователи | `docs/v1.0/ru/users/` | Владелец / менеджер магазина |
+| Витрина | `docs/v1.0/ru/storefront/` | Разработчик `goshop_client` |
+| API | `docs/v1.0/ru/api/` | Интеграторы, backend — примеры запросов/ответов |
+| Практики | `docs/v1.0/ru/guides/best-practices/` | Vue / Nuxt разработчики |
+| Версии, тема | `docs/v1.0/ru/versions/`, `theme/` | Все |
+
+Новая major-версия docs: `pnpm version:snapshot v2.0` — см. [AGENTS.md](./AGENTS.md) и `docs/v1.0/ru/versions/doc-versioning.md`.
 
 Правила контрибуции: [AGENTS.md](./AGENTS.md).
 

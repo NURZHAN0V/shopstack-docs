@@ -24,3 +24,37 @@
 .doc-screenshot__badge {
   color: var(--ss-accent);
 }
+
+.VPVersionSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 0.75rem;
+  font-size: 13px;
+}
+
+.VPVersionSwitcher__label {
+  color: var(--vp-c-text-2);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .VPVersionSwitcher__label {
+    display: none;
+  }
+}
+
+.VPVersionSwitcher__select {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  font-size: 13px;
+  max-width: 220px;
+}
+
+.VPVersionSwitcher__select:focus {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 1px;
+}

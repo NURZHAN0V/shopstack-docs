@@ -1,16 +1,16 @@
 export default [
   { text: 'Начало', items: [
-    { text: 'Быстрый старт', link: '/ru/users/getting-started' },
-    { text: 'Первый доступ администратора', link: '/ru/users/first-admin-access' },
+    { text: 'Быстрый старт', link: '/v1.0/ru/users/getting-started' },
+    { text: 'Первый доступ администратора', link: '/v1.0/ru/users/first-admin-access' },
   ]},
   { text: 'Магазин', items: [
-    { text: 'Каталог и товары', link: '/ru/users/catalog-products' },
-    { text: 'Заказы и оплата', link: '/ru/users/orders-and-payments' },
-    { text: 'Доставка (СДЭК)', link: '/ru/users/delivery-cdek' },
-    { text: 'Контент и блог', link: '/ru/users/content-and-blog' },
+    { text: 'Каталог и товары', link: '/v1.0/ru/users/catalog-products' },
+    { text: 'Заказы и оплата', link: '/v1.0/ru/users/orders-and-payments' },
+    { text: 'Доставка (СДЭК)', link: '/v1.0/ru/users/delivery-cdek' },
+    { text: 'Контент и блог', link: '/v1.0/ru/users/content-and-blog' },
   ]},
   { text: 'Безопасность', items: [
-    { text: 'Двухфакторная аутентификация', link: '/ru/users/security-2fa' },
-    { text: 'FAQ', link: '/ru/users/faq' },
+    { text: 'Двухфакторная аутентификация', link: '/v1.0/ru/users/security-2fa' },
+    { text: 'FAQ', link: '/v1.0/ru/users/faq' },
   ]},
 ]
