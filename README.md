@@ -39,7 +39,7 @@ pnpm preview
 
 ## Публикация (GitHub Pages)
 
-Сайт: **https://nurzhan0v.github.io/shopstack-docs/**
+Сайт: **https://nurzhan0v.github.io/shopstack-docs/v1.0/ru/** (корень `/shopstack-docs/` редиректит сюда)
 
 После `git push` в `main` workflow `.github/workflows/deploy-pages.yml` собирает и выкладывает статику. В репозитории GitHub: **Settings → Pages → Source: GitHub Actions**.
 

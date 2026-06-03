@@ -1,3 +1,6 @@
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vitepress'
 import navRu from './nav.ru'
 import navEn from './nav.en'
@@ -26,8 +29,20 @@ const sharedTheme = {
   returnToTopLabel: 'Back to top',
 }
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const ROOT_REDIRECT_SNIPPET =
+  '<meta http-equiv="refresh" content="0;url=/shopstack-docs/v1.0/ru/">' +
+  '<script>location.replace("/shopstack-docs/v1.0/"+(navigator.language.toLowerCase().startsWith("ru")?"ru":"en")+"/")</script>'
+
 export default defineConfig({
   base: '/shopstack-docs/',
+  async buildEnd() {
+    const indexPath = path.join(__dirname, '../dist/index.html')
+    if (!fs.existsSync(indexPath)) return
+    let html = fs.readFileSync(indexPath, 'utf8')
+    if (html.includes('http-equiv="refresh"')) return
+    fs.writeFileSync(indexPath, html.replace('<head>', `<head>${ROOT_REDIRECT_SNIPPET}`))
+  },
   title: 'ShopStack Docs',
   description: 'Documentation for ShopStack platform — admin, API, storefront',
   lastUpdated: true,
