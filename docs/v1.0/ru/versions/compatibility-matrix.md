@@ -8,7 +8,7 @@
 | **Панель (npm)** | `goshop/package.json` | **0.1.0** |
 | **Docker prod** | `deploy/.env.example` → `IMAGE_TAG` | **1.0.0** |
 | **Витрина** | `goshop_client/package.json` | **1.0.0** |
-| **Портал docs** | `shopstack-docs/package.json` | **1.0.0** |
+| **Портал docs** | `shopstack-docs/package.json` | **1.0.1** |
 | **Снимок docs (URL)** | `docs/v1.0/`, переключатель в шапке | **v1.0** (API 1.0) |
 
 ## Политика изменений API
